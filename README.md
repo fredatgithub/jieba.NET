@@ -171,7 +171,7 @@ word 有限公司         start: 6   end: 10
 
 ```c#
 var segmenter = new JiebaSegmenter();
-var s = "永和服装饰品有限公司";
+var s = "Vêtements Yonghe Co., Ltd."; //"永和服装饰品有限公司";
 var tokens = segmenter.Tokenize(s, TokenizerMode.Search);
 foreach (var token in tokens)
 {
@@ -180,12 +180,12 @@ foreach (var token in tokens)
 ```
 
 ```
-word 永和           start: 0   end: 2
-word 服装           start: 2   end: 4
-word 饰品           start: 4   end: 6
-word 有限           start: 6   end: 8
-word 公司           start: 8   end: 10
-word 有限公司         start: 6   end: 10
+word 永和  Yonghwa           start: 0   end: 2
+word 服装 vêtements          start: 2   end: 4
+word 饰品   ornements        start: 4   end: 6
+word 有限   fini             start: 6   end: 8
+word 公司 compagnie          start: 8   end: 10
+word 有限公司 Co., Ltd.      start: 6   end: 10
 ```
 
 ### 6. 并行分词
